@@ -1,0 +1,37 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+    enabled: true
+  instance:
+    preferIpAddress: true
+    lease-renewal-interval-in-seconds: 30
+
+server:
+  port: 8088
+
+  servlet:
+    context-path: /api/history
+management:
+  server:
+    port: 8188
+  endpoint:
+    shutdown:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/history
+    username: postgres
+    password: root
+  liquibase:
+    default-schema: history
+    change-log: db/changelog/db.changelog-master.yaml
+    enabled: true
+    drop-first: false
+  application:
+    name: history-app
