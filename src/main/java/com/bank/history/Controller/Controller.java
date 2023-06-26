@@ -19,7 +19,7 @@ public class Controller {
     private final HistoryService historyService;
 
     @GetMapping("/{id}")
-    public ResponseEntity<HistoryDTO> getHistoryById(@PathVariable BigInteger id) {
+    public ResponseEntity<HistoryDTO> getHistoryById(@PathVariable Long id) {
         HistoryDTO historyDTO = historyService.getHistoryById(id);
         return new ResponseEntity<>(historyDTO, HttpStatus.OK);
     }

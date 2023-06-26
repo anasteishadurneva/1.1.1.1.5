@@ -13,11 +13,11 @@ import java.math.BigInteger;
 @NoArgsConstructor
 @AllArgsConstructor
 public class HistoryDTO {
-    private BigInteger id;
-    private BigInteger transferAuditId;
-    private BigInteger profileAuditId;
-    private BigInteger accountAuditId;
-    private BigInteger antifraudAuditId;
-    private BigInteger bankInfoAuditId;
-    private BigInteger authAuditId;
+    private Long id;
+    private Long transferAuditId;
+    private Long profileAuditId;
+    private Long accountAuditId;
+    private Long antifraudAuditId;
+    private Long bankInfoAuditId;
+    private Long authAuditId;
 }

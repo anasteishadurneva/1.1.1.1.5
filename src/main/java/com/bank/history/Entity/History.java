@@ -15,25 +15,25 @@ import lombok.Setter;
 public class History {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Integer id;
+    private Long id;
 
     @Column(name = "transfer_audit_id")
-    private Integer transfer_audit_id;
+    private Long transfer_audit_id;
 
     @Column(name = "profile_audit_id")
-    private Integer profile_audit_id;
+    private Long profile_audit_id;
 
     @Column(name = "account_audit_id")
-    private Integer account_audit_id;
+    private Long account_audit_id;
 
     @Column(name = "anti_fraud_audit_id")
-    private Integer anti_fraud_audit_id;
+    private Long anti_fraud_audit_id;
 
     @Column(name = "public_bank_audit_id")
-    private Integer public_bank_audit_id;
+    private Long public_bank_audit_id;
 
     @Column(name = "authorization_id")
-    private Integer authorization_id;
+    private Long authorization_id;
 
 
 }
